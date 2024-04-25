@@ -7,13 +7,14 @@ const PORT = process.env.PORT || 3000;
 const { fruits } = require('./models/fruits');
 
 // ------------ MIDDLEWARE ------------
-app.set('view engine', 'ejs'); // come back to this
+app.set('view engine', 'ejs');
+app.use('/', express.static('public'));
 
 // ------------ ROUTES ---------------
 // ******* INDEX ROUTE **********
 app.get('/fruits', (req, res) => {
     // send index.ejs with array of fruits
-    res.render('index', { allFruits: fruits });
+    res.render('fruits/index', { allFruits: fruits });
 });
 
 // ******* SHOW ROUTE **********
@@ -25,7 +26,7 @@ app.get('/fruits/:indexOfFruitsArray', (req, res) => {
         res.render('404', {});
     } else {
         // res.send(fruits[idx]);
-        res.render('show', { fruit: fruits[idx] });
+        res.render('fruits/show', { fruit: fruits[idx] });
     }
 });
 

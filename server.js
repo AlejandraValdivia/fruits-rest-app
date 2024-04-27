@@ -1,16 +1,19 @@
 const express = require('express');
 const app = express(); // our app
 const PORT = process.env.PORT || 3000;
+const methodOverride = require('method-override');
 
 // ------------ DATA -----------------
 // inside of fruits.js
 const { fruits } = require('./models/fruits');
 
 // ------------ MIDDLEWARE ------------
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 app.use('/', express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// add middle for PUT AND DELETE methods
 
 // ------------ ROUTES ---------------
 // ******* INDEX ROUTE **********
@@ -33,8 +36,15 @@ app.get('/fruits/:indexOfFruitsArray', (req, res) => {
         res.render('404', {});
     } else {
         // res.send(fruits[idx]);
-        res.render('fruits/show', { fruit: fruits[idx] });
+        res.render('fruits/show', { fruit: fruits[idx], id: idx });
     }
+});
+
+// *********** GET - EDIT PAGE **********
+app.get('/fruits/:id/edit', (req, res) => {
+    const fruit = fruits[req.params.id];
+    let id = parseInt(req.params.id);
+    res.render('fruits/edit', { fruit, id });
 });
 
 // ********** POST NEW FRUIT ************
@@ -48,6 +58,18 @@ app.post('/fruits', (req, res) => {
     }
     fruits.push(req.body);
     res.redirect('/fruits');
+});
+
+// ************** PUT - UPDATE FRUIT *************
+app.put('/fruits/:id', (req, res) => {
+    console.log('------- UPDATE FRUIT -------\n', req.body);
+    if (req.body.readyToEat === 'on') {
+        req.body.readyToEat = true;
+    } else {
+        req.body.readyToEat = false;
+    }
+    fruits[parseInt(req.params.id)] = req.body; //
+    res.redirect('/fruits'); // redirect to /fruits route to get to index page
 });
 
 // ----------- LISTEN FOR SERVER ----------

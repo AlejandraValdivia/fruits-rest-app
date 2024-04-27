@@ -79,6 +79,14 @@ app.put('/fruits/:id', (req, res) => {
     res.redirect('/fruits'); // redirect to /fruits route to get to index page
 });
 
+// ************* DELETE - DELETE FRUIT ***********
+app.delete('/fruits/:id', (req, res) => {
+    // remove the fruit item from the fruits array
+    fruits.splice(parseInt(req.params.id), 1);
+    console.log(fruits);
+    res.redirect('/fruits'); // redirect back to index page (/fruits)
+});
+
 // ----------- LISTEN FOR SERVER ----------
 app.listen(PORT, () => {
     console.log('🎧 Server is running on PORT 🎧', PORT);

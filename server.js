@@ -47,6 +47,13 @@ app.get('/fruits/:id/edit', (req, res) => {
     res.render('fruits/edit', { fruit, id });
 });
 
+// ********* GET - DELETE PAGE ************
+app.get('/fruits/:id/delete', (req, res) => {
+    const fruit = fruits[req.params.id];
+    let id = parseInt(req.params.id);
+    res.render('fruits/delete', { fruit, id });
+});
+
 // ********** POST NEW FRUIT ************
 app.post('/fruits', (req, res) => {
     console.log('---------- FORM BODY ---------\n', req.body);

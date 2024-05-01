@@ -1,0 +1,631 @@
+/*
+	* CSS for Truncated Post Previews
+	*
+	* @package      sallysbakingrecipes
+	* @author       Lindsay Humes
+	* @since        1.0.0
+	* @license      GPL-2.0+
+*/
+/*--------------------------------------------------------------
+## Post Type - Post Abbreviated Universal
+--------------------------------------------------------------*/
+.post-abbr {
+    -webkit-box-shadow: 0 0 10px 0 rgba(33, 33, 33, .1);
+    -moz-box-shadow: 0 0 10px 0 rgba(33, 33, 33, .1);
+    box-shadow: 0 0 10px 0 rgba(33, 33, 33, .1);
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.post-abbr img, .post-abbr a {
+    display: block;
+}
+
+.post-abbr a, .post-abbr a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+.post-abbr a:hover, .post-abbr a:visited:hover {
+    color: #C3366F;
+}
+
+.read-more {
+    display: block;
+    width: fit-content;
+    background: #212121;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0 0;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.read-more .sm-caps {
+    line-height: 1;
+    display: block;
+}
+
+a.read-more, a.read-more:visited, a.read-more:hover, a.read-more:visited:hover {
+    color: #ffffff;
+}
+
+a.read-more:hover {
+    background: #C3366F;
+}
+/*--------------------------------------------------------------
+## Post Type - Abbreviated XSmall
+--------------------------------------------------------------*/
+.post-xsm {
+    width: calc(1 / 6 * 100% - 13px);
+    margin: 0 15px 0 0;
+    transform: rotate(-2.5deg);
+}
+.post-xsm:nth-child(2n) {
+    transform: rotate(2.5deg);
+}
+.post-xsm:hover {
+    transform: rotate(2.5deg);
+    transition: all .8s ease 0s;
+
+}
+.post-xsm:nth-child(2n):hover {
+    transform: rotate(-2.5deg);
+    transition: all .8s ease 0s; 
+}
+
+.post-xsm:nth-child(6n) {
+    margin: 0;
+}
+.post-xsm a {
+    display: block;
+    color: #212121;
+}
+.post-xsm h3 {
+    padding: 8px;
+    line-height: 1.2;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
+.post-xsm img {
+    display: block;
+    border-radius: 5px 5px 0 0;
+}
+/*--------------------------------------------------------------
+## Post Type - Abbreviated Small
+--------------------------------------------------------------*/
+.post-sm {
+    width: calc(1 / 6 * 100% - 17px);
+    margin: 0 20px 20px 0;
+}
+
+.post-sm:nth-child(6n) {
+    margin: 0 0 20px 0;
+}
+
+.index-wrap .post-sm, .index-wrap .post-sm:nth-child(6n) {
+    width: calc(1 / 5 * 100% - 9px);
+    margin: 0 10px 10px 0;
+}
+
+.index-wrap .post-sm:nth-child(5n) {
+    margin: 0 0 10px 0;
+}
+
+.widget-posts .post-sm, .widget-posts .post-sm:nth-child(6n) {
+    width: calc(1 / 4 * 100% - 10px);
+    margin: 0 10px 10px 0;
+}
+
+.widget-posts .post-sm:nth-child(4n) {
+    width: calc(1 / 4 * 100% - 10px);
+    margin: 0 0 10px;
+}
+
+.post-sm h3 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    padding: 10px 10px 5px;
+    line-height: 1.2;
+    font-size: 14px;
+    margin: 0;
+}
+.widget-posts .post-sm h3 {
+    font-size: 16px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    margin: 0;
+}
+
+.post-sm img {
+    border-radius: 5px 5px 0 0;
+}
+.post-sm .recipe-meta {
+    padding: 0 10px 10px;
+}
+.widget-posts .post-sm .recipe-meta {
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing:0;
+    font-weight:400;
+}
+/*--------------------------------------------------------------
+## Post Type - Abbreviated Medium
+--------------------------------------------------------------*/
+.post-med {
+    width: calc(1 / 4 * 100% - 15px);
+    margin: 0 20px 20px 0;
+}
+
+.post-med:nth-child(4n) {
+    margin: 0 0 20px 0;
+}
+.post-med .abbr-content {
+    padding: 15px;
+}
+.post-med h3 {
+    padding: 0 0 8px;
+    line-height: 1.2;
+    font-size: 22px;
+    margin: 0;
+}
+
+.post-med img {
+    border-radius: 5px 5px 0 0;
+}
+
+
+/*--------------------------------------------------------------
+## Post Type - Abbreviated Large
+--------------------------------------------------------------*/
+.post-lg {
+    width: calc(1 / 3 * 100% - 14px);
+    margin: 0 20px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-lg:nth-child(3n) {
+    margin: 0 0 20px 0;
+}
+
+.content-post-group .post-lg, .content-post-group .post-lg:nth-child(3n) {
+    width: 100%;
+    margin: 0 0 10px !important;
+}
+
+.content-post-group .post-lg:last-child {
+    margin: 0 !important;
+}
+
+.post-lg-img-link {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+.post-lg h3 {
+    padding: 0 0 8px;
+    line-height: 1.2;
+    font-size: 18px;
+    margin: 0;
+}
+
+.post-lg img {
+    border-radius: 5px 0 0 5px;
+        width: 100%;
+    max-width: 100%;
+}
+
+.post-lg .abbr-content {
+    padding: 15px;
+    width: 100%;
+    max-width: 70%;
+}
+.post-lg .overprint a {
+    font-weight: 400;
+}
+/*--------------------------------------------------------------
+## Post Type - Abbreviated XLarge
+--------------------------------------------------------------*/
+.post-xl {
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    margin: 0 auto 30px;
+}
+.featured-recipe-block .post-xl {
+    width:  100%!important;
+}
+
+.post-xl .abbr-content {
+    padding:  20px;
+    width:  43%;
+}
+.post-xl img {
+    border-radius:  5px 0 0 5px;
+}
+.post-xl h3 {
+    padding: 15px 0;
+    line-height: 1.2;
+    font-size: 28px;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -.01em;
+    margin: 0;
+}
+.post-xl  .entry-summary {
+    padding:  15px 0 0
+}
+/*--------------------------------------------------------------
+## Post Type - Widget
+--------------------------------------------------------------*/
+.post-widget {
+    width: calc(1 / 2 * 100% - 5px);
+    margin: 0 10px 10px 0;
+}
+
+.post-widget:nth-child(2n) {
+    margin: 0 0 10px 0;
+}
+.post-widget h3 {
+    padding: 10px 10px 5px;
+    line-height: 1.2;
+    font-size: 14px;
+    margin: 0;
+}
+
+.post-widget img {
+    border-radius: 5px 5px 0 0;
+}
+
+/*--------------------------------------------------------------
+## Post Type - Abbreviated Video
+--------------------------------------------------------------*/
+.post-video {
+    width: calc(1 / 3 * 100% - 16px);
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+
+.post-video:nth-child(3n) {
+    margin: 0 0 20px 0;
+}
+
+.post-video h3 {
+    padding: 0 0 8px;
+    line-height: 1.2;
+    font-size: 22px;
+    margin: 0;
+
+}
+
+.post-video img {
+    border-radius: 5px 5px 0 0;
+}
+
+.post-video .abbr-content {
+    padding: 15px;
+    position: relative;
+}
+.video-icon {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    z-index: 3;
+    background: #F6DACA;
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+## Post Type - Product Small
+--------------------------------------------------------------*/
+.product-sm {
+    width: calc(1 / 6 * 100% - 9px);
+    margin: 0 10px 10px 0;
+}
+
+.product-sm:nth-child(6n) {
+    margin: 0 0 10px 0;
+}
+
+.results .product-sm, .results .product-sm:nth-child(6n) {
+    width: calc(1 / 5 * 100% - 9px);
+    margin: 0 10px 10px 0;
+}
+
+.results .product-sm:nth-child(5n) {
+    margin: 0 0 10px 0;
+}
+
+.product-sm h3 {
+    padding: 10px 10px 5px;
+    line-height: 1.2;
+    font-size: 18px;
+    margin: 0!important;
+
+}
+
+.product-sm img {
+    border-radius: 5px 5px 0 0;
+}
+
+.product-sm .sm-sans {
+    padding: 0 10px 10px;
+}
+.single .product-sm, .single .product-sm:nth-child(6n) {
+    width: calc(1 / 3 * 100% - 9px);
+    margin: 0 10px 10px 0;
+}
+.single .product-sm:nth-child(3n) {
+    margin: 0 0 10px;
+}
+/*--------------------------------------------------------------
+## Post Type - Product Medium
+--------------------------------------------------------------*/
+.product-med {
+    width: calc(1 / 4 * 100% - 15px);
+    margin: 0 20px 20px 0;
+}
+
+.product-med:nth-child(4n) {
+    margin: 0 0 20px 0;
+}
+
+.product-med .abbr-content {
+    padding: 10px;
+}
+.product-med .sm-ser {
+    text-transform: none;
+}
+.product-med h3 {
+    padding: 10px 0;
+    line-height: 1.2;
+    font-size: 20px;
+    margin: 0!important
+}
+.product-med .content-meta {
+    line-height: 1.4;
+}
+.product-med img {
+    border-radius: 5px 5px 0 0;
+}
+.single .product-med, .single .product-med:nth-child(4n) {
+    width: calc(1 / 2 * 100% - 10px);
+    margin: 0 20px 20px 0;
+}
+.single .product-med:nth-child(2n) {
+    margin: 0 0 20px;
+}
+
+/*--------------------------------------------------------------
+## Post Type - Product Large
+--------------------------------------------------------------*/
+.product-lg {
+    width: calc(1 / 3 * 100% - 15px);
+    margin: 0 20px 20px 0;
+    display: block;
+    position: relative;
+
+}
+
+.product-lg:nth-child(3n) {
+    margin: 0 0 20px 0;
+}
+.product-lg .entry-image-link {
+    position: relative;
+    margin: 0 auto -50px;
+    display: block;
+    z-index: 999;
+}
+.product-lg img {
+    width: 200px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #F6f5f5;
+}
+.product-lg .abbr-content {
+    padding: 60px 20px 20px;
+    width: 100%;
+    text-align: center;
+    background: #F6F5F5;
+    position: relative;
+}
+
+.product-lg h3 {
+    padding: 10px auto;
+    line-height: 1.2;
+    font-size: 24px;
+    margin: 10px 0!important;
+}
+
+
+.product-lg .content-meta {
+    font-size: 14px;
+    line-height: 1.3;
+}
+.product-lg .post-abbr .content-meta a {
+    display: initial;
+    color: #117878;
+    text-decoration: underline;
+}
+
+.product-med.post-abbr .content-meta a {
+    display: initial;
+}
+.buy-now {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 15px;
+    border: 2px solid #eaeaea;
+    width: fit-content;
+    border-radius: 5px;
+}
+.buy-now .sm-caps {
+    display: block;
+}
+.buy-now:hover {
+    background: #eaeaea;
+    color: #212121;
+}
+
+.single .product-lg, .single .product-lg:nth-child(3n) {
+    width: 100%;
+    margin: 0 0 15px;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #F6F5F5;
+    border-radius: 5px;
+}
+.single .product-lg .entry-image-link {
+    margin: 0;
+    border-right: 2px solid #f6f5f5;
+    z-index: 1;
+}
+.single .product-lg img {
+    width: 200px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+}
+.single .product-lg .abbr-content {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: #FFFFFF;
+
+}
+.single .buy-now {
+    margin: 10px 0 0;
+    border: 2px solid #FBDBE1;
+    color: #C3366F;
+}
+.single .buy-now:hover {
+    background: #FBDBE1;
+}
+
+/*--------------------------------------------------------------
+## No Results
+--------------------------------------------------------------*/
+.no-results {
+    max-width: 1045px;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    padding: 30px 0 0;
+}
+
+/*--------------------------------------------------------------
+## Mobile
+--------------------------------------------------------------*/
+@media screen and (max-width: 810px) {
+    .section-posts .post-sm, .section-posts .post-med, .section-posts .post-xl, .section-posts .post-video, .section-posts .product-med, .section-posts .product-lg, .section-posts .post-lg:nth-last-child(-n+3) {
+        margin-bottom: 10px;
+    }
+    .post-xsm, .post-xsm:nth-child(6n), .post-sm, .post-sm:nth-child(6n), .index-wrap .post-sm, .index-wrap .post-sm:nth-child(6n), .index-wrap .post-sm:nth-child(5n) {
+        width: calc(1 / 3 * 100% - 7px);
+        margin: 0 10px 10px 0;
+    }
+
+    .post-sm:nth-child(3n), .index-wrap .post-sm:nth-child(3n) {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-lg img, .single .product-lg img{
+        width: 100%;
+        max-width: 100%;
+    }
+    .post-med .abbr-content {
+        padding: 10px;
+    }
+    .post-med h3, .post-sm h3 {
+        font-size: 16px;
+    }
+    .post-xl {
+        display: block;
+    }
+    .post-xl img {
+        border-radius: 5px 5px 0 0;
+    }
+    .post-xl .abbr-content {
+        width: 100%;
+    }
+    .post-video, .post-video:nth-child(3n) {
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+    .post-lg, .post-lg:nth-child(3n) {
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+    .post-lg img {
+        width: 100%;
+    }
+
+    .widget-posts .post-sm, .widget-posts .post-sm:nth-child(4n), .post-xsm, .post-xsm:nth-child(3n), .post-med, .post-med:nth-child(4n), .post-sm, .post-sm:nth-child(6n), .index-wrap .post-sm, .index-wrap .post-sm:nth-child(3n), .index-wrap .post-sm:nth-child(6n), .index-wrap .post-sm:nth-child(5n), .post-sm:nth-child(3n) {
+        width: calc(1 / 2 * 100% - 5px);
+        margin: 0 10px 10px 0;
+    }
+
+    .widget-posts .post-sm:nth-child(2n), .post-xsm:nth-child(2n), .post-med:nth-child(2n), .post-sm:nth-child(2n), .index-wrap .post-sm:nth-child(2n) {
+        margin: 0 0 10px;
+    }
+
+    .product-sm, .product-sm:nth-child(6n), .product-sm:nth-child(4n), .results .product-sm, .results .product-sm:nth-child(6n), .results .product-sm:nth-child(5n), .results .product-sm:nth-child(4n), .single .product-sm, .single .product-sm:nth-child(3n) {
+        width: calc(1 / 2 * 100% - 8px);
+        margin: 0 10px 10px 0;
+    }
+
+    .product-sm:nth-child(2n), .results .product-sm:nth-child(2n), .single .product-sm:nth-child(2n) {
+        margin: 0 0 10px;
+    }
+
+    .product-med, .product-med:nth-child(4n) {
+        width: calc(1 / 2 * 100% - 8px);
+        margin: 0 10px 10px 0;
+    }
+
+    .product-med:nth-child(2n) {
+        margin: 0 0 10px;
+    }
+
+    .product-lg, .product-lg:nth-child(3n) {
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+    .post-xsm {
+        transform: rotate(0deg);
+    }
+    .post-xsm:nth-child(2n) {
+        transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 475px) {
+.single .product-lg, .single .product-lg, .single .product-lg:nth-child(3n){
+    display: block;
+}
+.single .product-lg .entry-image-link {
+    margin: 0;
+    border-right: 0;
+    border-bottom: 2px solid #f6f5f5;
+}
+.single .product-lg .abbr-content {
+    width: 100%;
+}
+}

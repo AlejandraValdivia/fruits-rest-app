@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/homepage.css" />
+    
+    <title>Homepage</title>
+  </head>
+  <header class="header">
+    <a href="#" >
+      <img src="/img/alejandras-food-blog-beige.png" class="logo" alt="logo">
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar" id="nav-ul">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#vegetables">Vegetables</a>
+      <a href="#fruits">Fruits</a>
+      <a href="#meats">Meats</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#world-cuisines">Cuisines</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px; color:white">Homepage</h1>
+    </div>
+  </div>
+  <body>
+    <div>
+      
+    </div>
+    <h1><%= meat.name %></h1>
+    <p>Color: <%= meat.color %></p>
+    <% if (meat.readyToEat) { %>
+    <p>Ready to Eat 👍🏽</p>
+    <% } else { %>
+    <p>Not Ready to Eat 👎🏽</p>
+    <% } %>
+  </body>
+</html>

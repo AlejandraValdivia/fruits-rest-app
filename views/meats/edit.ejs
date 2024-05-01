@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Meat</title>
+</head>
+<body>
+    <h1>Edit Meat page</h1>
+    <form action="/meats/<%= id %>/?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= meat.name %>"/>
+        <label for="color">Color</label>
+        <input type="text" name="color" id="color" value="<%= meat.color %>"/>/>
+        <label for="readyToEat">Is Ready to Eat?</label>
+        <input type="checkbox" name="readyToEat" id="readyToEat" 
+        <% if ( meat.readyToEat === true ) { %>
+            checked
+            <% } %>
+        />
+        <input type="submit" value="Submit meat">
+        <button><a href="/meats/<%= id %>/delete">Delete meat</a></button>
+        
+      </form>
+    </form>
+</body>
+</html>

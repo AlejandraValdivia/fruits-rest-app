@@ -327,6 +327,16 @@ app.get('/pastries', (req, res) => {
   res.render('pastries/index.ejs', {allPastries: pastries})
 })
 
+// ========== PASTRY SHOW ============
+app.get('/pastries/:indexOfPastriesArray', (req, res) => {
+  let idx = parseInt(req.params.indexOfPastriesArray);
+  if (idx >= pastries.length) {
+      res.render('404.ejs');
+  } else {
+      res.render('pastries/show.ejs', {pastry: pastries[idx], id: idx});
+  }
+})
+
 
 // -----Fruits ID -----
 app.put("/fruits/:id", (req, res) => {

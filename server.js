@@ -265,7 +265,7 @@ app.get('/desserts/new', (req, res) => {
 })
 
 // ========== DESSERT SHOW ============
-app.get('/desserts/:indexOfFruitsArray', (req, res) => {
+app.get('/desserts/:indexOfDessertsArray', (req, res) => {
   let idx = parseInt(req.params.indexOfDessertsArray);
   if (idx >= desserts.length) {
       res.render('404.ejs');
@@ -279,6 +279,13 @@ app.get('/desserts/:id/edit', (req, res) => {
   const dessert = desserts[req.params.id];
   let id = parseInt(req.params.id)
   res.render('desserts/edit', { dessert, id })
+})
+
+// ========== DESSERT GET DELETE PAGE =============
+app.get('/desserts/:id/delete', (req, res) => {
+  const dessert = desserts[req.params.id];
+  let id = parseInt(req.params.id);
+  res.render('desserts/delete', { dessert, id })
 })
 
 // ========== DESSERT POST ===========
@@ -303,6 +310,12 @@ app.put('/desserts/:id', (req, res) => {
   desserts[parseInt(req.params.id)] = req.body;
   res.redirect('/desserts')
 })
+
+// =========== DESSERT DELETE ==========
+app.delete('/desserts/:id', (req, res) => {
+  desserts.splice(parseInt(req.params.id), 1);
+  res.redirect('/desserts');
+});
 
 
 // -----Fruits ID -----

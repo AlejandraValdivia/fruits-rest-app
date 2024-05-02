@@ -1,7 +1,7 @@
 const desserts = [
     {
       name: "Blueberry Muffin",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "15 minutes",
       cookTime: "25 minutes",
       servings: 12,
@@ -28,7 +28,7 @@ const desserts = [
     },
     {
       name: "Chocolate Muffin",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "15 minutes",
       cookTime: "20 minutes",
       servings: 12,
@@ -55,7 +55,7 @@ const desserts = [
     },
     {
       name: "Cheesecake",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "30 minutes",
       cookTime: "1 hour",
       servings: 8,
@@ -80,7 +80,7 @@ const desserts = [
     },
     {
       name: "Vanilla Ice Cream",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "10 minutes",
       cookTime: "20 minutes (plus freezing time)",
       servings: 8,
@@ -99,7 +99,7 @@ const desserts = [
     },
     {
       name: "Chocolate Chip Cookies",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "15 minutes",
       cookTime: "10 minutes",
       servings: 24,
@@ -127,7 +127,7 @@ const desserts = [
     },
     {
       name: "Chocolate Lava Cake",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "20 minutes",
       cookTime: "14 minutes",
       servings: 6,
@@ -155,7 +155,7 @@ const desserts = [
     },
     {
       name: "Cinnamon Roll",
-      img: "",
+      img: "/img/dessert-placeholder.jpeg",
       prepTime: "20 minutes",
       cookTime: "25 minutes",
       servings: 12,

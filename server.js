@@ -259,7 +259,7 @@ app.get('/desserts', (req, res) => {
   res.render('desserts/index.ejs', {allDesserts: desserts})
 })
 
-// ========== DESSERT POST ============
+// ========== DESSERT GET POST PAGE============
 app.get('/desserts/new', (req, res) => {
   res.render('desserts/new.ejs')
 })
@@ -279,6 +279,17 @@ app.get('/desserts/:id/edit', (req, res) => {
   const dessert = desserts[req.params.id];
   let id = parseInt(req.params.id)
   res.render('desserts/edit', { dessert, id })
+})
+
+// ========== DESSERT POST ===========
+app.post('/desserts', (req, res) => {
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  desserts.push(req.body)
+  res.redirect('/desserts')
 })
 
 // ========== DESSERT PUT ============

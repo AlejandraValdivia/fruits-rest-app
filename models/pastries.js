@@ -1,7 +1,7 @@
 const pastries = [
     {
       name: "Croissant",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "4 hours",
       cookTime: "15 minutes",
       servings: 12,
@@ -29,7 +29,7 @@ const pastries = [
     },
     {
       name: "Danish Pastry",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "5 hours",
       cookTime: "20 minutes",
       servings: 12,
@@ -53,7 +53,7 @@ const pastries = [
     },
     {
       name: "Puff Pastry",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "15 minutes",
       cookTime: "20 minutes",
       servings: 12,
@@ -74,7 +74,7 @@ const pastries = [
     },
     {
       name: "Apple Strudel",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "1 hour",
       cookTime: "45 minutes",
       servings: 8,
@@ -100,7 +100,7 @@ const pastries = [
     },
     {
       name: "Beignets",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "2 hours",
       cookTime: "5 minutes",
       servings: 12,
@@ -126,7 +126,7 @@ const pastries = [
     },
     {
       name: "Éclair",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "1 hour",
       cookTime: "35 minutes",
       servings: 10,
@@ -150,7 +150,7 @@ const pastries = [
     },
     {
       name: "Scones",
-      img: "",
+      img: "/img/pastry-placeholder.jpeg",
       prepTime: "15 minutes",
       cookTime: "20 minutes",
       servings: 8,

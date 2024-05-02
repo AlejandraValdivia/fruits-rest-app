@@ -332,6 +332,20 @@ app.get('/pastries/new', (req, res) => {
   res.render('pastries/new.ejs')
 })
 
+// ========== PASTRY GET PUT PAGE =============
+app.get('/pastries/:id/edit', (req, res) => {
+  const pastry = pastries[req.params.id];
+  let id = parseInt(req.params.id)
+  res.render('pastries/edit', { pastry, id })
+})
+
+// ========== PASTRY GET DELETE PAGE =============
+app.get('/pastries/:id/delete', (req, res) => {
+  const pastry = pastries[req.params.id];
+  let id = parseInt(req.params.id);
+  res.render('pastries/delete', { pastry, id })
+})
+
 // ========== PASTRY SHOW ============
 app.get('/pastries/:indexOfPastriesArray', (req, res) => {
   let idx = parseInt(req.params.indexOfPastriesArray);
@@ -350,6 +364,24 @@ app.post('/pastries', (req, res) => {
       req.body.readyToEat = false
   }
   pastries.push(req.body)
+  res.redirect('/pastries')
+})
+
+// =========== PASTRY DELETE ==========
+app.delete('/pastries/:id', (req, res) => {
+  pastries.splice(parseInt(req.params.id), 1);
+  res.redirect('/pastries');
+});
+
+// ========== PASTRY PUT ============
+app.put('/pastries/:id', (req, res) => {
+  console.log('------ UPDATE PASTRY ----------\n', req.body)
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  pastries[parseInt(req.params.id)] = req.body;
   res.redirect('/pastries')
 })
 

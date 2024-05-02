@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastry Edit</title>
+</head>
+<body>
+    <h1>Edit pastry page</h1>
+    <form action="/pastries/<%= id %>/?_method=PUT" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= pastry.name %>"/>
+        <label for="color">Color</label>
+        <input type="text" name="color" id="color" value="<%= pastry.color %>"/>/>
+        <label for="readyToEat">Is Ready to Eat?</label>
+        <input type="checkbox" name="readyToEat" id="readyToEat" 
+        <% if ( pastry.readyToEat === true ) { %>
+            checked
+            <% } %>
+        />
+        <input type="submit" value="Submit Fruit">
+        <button><a href="/pastries/<%= id %>/delete">Delete Pastry</a></button>
+        
+      </form>
+    </form>
+</body>
+</html>

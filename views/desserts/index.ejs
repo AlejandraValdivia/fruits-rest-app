@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fruits.css" />
+    <link rel="stylesheet" href="/css/desserts.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <title>Fruits</title>
+    <title>Desserts</title>
   </head>
   <body>
     <header class="header">
@@ -31,7 +31,7 @@
     </header>
     <div class="hero-image">
       <div class="hero-text">
-        <h1>Fruits</h1>
+        <h1>Desserts</h1>
       </div>
     </div>
     
@@ -39,24 +39,24 @@
       <div class="timeline-row">
         <div class="timeline-column">
           <h2 class="title">
-            Fruits<span class="animate" style="--i: 1"></span>
+            Desserts<span class="animate" style="--i: 1"></span>
           </h2>
           <div class="timeline-box">
-            <% for( let index = 0; index < allFruits.length; index++ ) { %> <%
-            let fruit = allFruits[index] %>
+            <% for( let index = 0; index < allDesserts.length; index++ ) { %> <%
+            let dessert = allDesserts[index] %>
             <div class="timeline-content">
               <div class="content">
                 <div class="year">
                   <i class="bx bxs-calendar"></i>2021 - 2022
                 </div>
-                <h3><%= fruit.name %></h3>
-                <img src="<%= fruit.img %>" alt="">
+                <h3><%= dessert.name %></h3>
+                <img src="<%= dessert.img %>" alt="">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                   voluptate natus consectetur suscipit aspernatur quos obcaecati
                   dolore veniam debitis omnis.
                 </p>
-                <a href="/fruits/<%= index %>">Checkout more...</a>
+                <a href="/desserts/<%= index %>">Checkout more...</a>
               </div>
             </div>
             <div></div>
@@ -71,20 +71,20 @@
             More Fruits<span class="animate" style="--i: 1"></span>
           </h2>
           <div class="timeline-box">
-            <% for( let index = 0; index < allFruits.length; index++ ) { %> <%
-            let fruit = allFruits[index] %>
+            <% for( let index = 0; index < allDesserts.length; index++ ) { %> <%
+            let dessert = allDesserts[index] %>
             <div class="timeline-content">
               <div class="content">
                 <div class="year">
                   <i class="bx bxs-calendar"></i>2021 - 2022
                 </div>
-                <h3><%= fruit.name %></h3>
+                <h3><%= dessert.name %></h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                   voluptate natus consectetur suscipit aspernatur quos obcaecati
                   dolore veniam debitis omnis.
                 </p>
-                <a href="/fruits/<%= index %>">Checkout more...</a>
+                <a href="/desserts/<%= index %>">Checkout more...</a>
               </div>
             </div>
             <div></div>

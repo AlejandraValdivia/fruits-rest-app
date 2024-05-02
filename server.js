@@ -11,6 +11,10 @@ const { meats } = require("./models/meats");
 const { recipes } = require("./models/recipes");
 const { about } = require("./models/about");
 const { worldCuisines } = require("./models/worldCuisines");
+// *********** DESSERT NODE VARIABLE ************
+const desserts = require("./models/desserts.js");
+// *********** PASTRIES NODE VARIABLE ***********
+const pastries = require('./models/pastries.js')
 
 // ------ Middleware---------
 app.use(methodOverride("_method"));
@@ -249,6 +253,138 @@ app.get("/world-cuisines/:indexOfWorldCuisinesArray", (req, res) => {
     res.render("world-cuisines/show", { worldCuisine: worldCuisines[idx] });
   }
 });
+
+// ********** DESSERT ROUTE ADDITIONS ***********
+
+// ========== DESSERT INDEX ===========
+app.get('/desserts', (req, res) => {
+  res.render('desserts/index.ejs', {allDesserts: desserts})
+})
+
+// ========== DESSERT GET POST PAGE============
+app.get('/desserts/new', (req, res) => {
+  res.render('desserts/new.ejs')
+})
+
+// ========== DESSERT SHOW ============
+app.get('/desserts/:indexOfDessertsArray', (req, res) => {
+  let idx = parseInt(req.params.indexOfDessertsArray);
+  if (idx >= desserts.length) {
+      res.render('404.ejs');
+  } else {
+      res.render('desserts/show.ejs', {dessert: desserts[idx], id: idx});
+  }
+})
+
+// ========== DESSERT GET PUT PAGE =============
+app.get('/desserts/:id/edit', (req, res) => {
+  const dessert = desserts[req.params.id];
+  let id = parseInt(req.params.id)
+  res.render('desserts/edit', { dessert, id })
+})
+
+// ========== DESSERT GET DELETE PAGE =============
+app.get('/desserts/:id/delete', (req, res) => {
+  const dessert = desserts[req.params.id];
+  let id = parseInt(req.params.id);
+  res.render('desserts/delete', { dessert, id })
+})
+
+// ========== DESSERT POST ===========
+app.post('/desserts', (req, res) => {
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  desserts.push(req.body)
+  res.redirect('/desserts')
+})
+
+// ========== DESSERT PUT ============
+app.put('/desserts/:id', (req, res) => {
+  console.log('------ UPDATE DESSERT ----------\n', req.body)
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  desserts[parseInt(req.params.id)] = req.body;
+  res.redirect('/desserts')
+})
+
+// =========== DESSERT DELETE ==========
+app.delete('/desserts/:id', (req, res) => {
+  desserts.splice(parseInt(req.params.id), 1);
+  res.redirect('/desserts');
+});
+// *********** END OF DESSERTS ROUTES *************
+
+// *********** PASTRIES ROUTES ADDITION ************
+
+// ========== PASTRIES INDEX ===========
+app.get('/pastries', (req, res) => {
+  res.render('pastries/index.ejs', {allPastries: pastries})
+})
+
+// ========== PASTRY GET POST PAGE============
+app.get('/pastries/new', (req, res) => {
+  res.render('pastries/new.ejs')
+})
+
+// ========== PASTRY GET PUT PAGE =============
+app.get('/pastries/:id/edit', (req, res) => {
+  const pastry = pastries[req.params.id];
+  let id = parseInt(req.params.id)
+  res.render('pastries/edit', { pastry, id })
+})
+
+// ========== PASTRY GET DELETE PAGE =============
+app.get('/pastries/:id/delete', (req, res) => {
+  const pastry = pastries[req.params.id];
+  let id = parseInt(req.params.id);
+  res.render('pastries/delete', { pastry, id })
+})
+
+// ========== PASTRY SHOW ============
+app.get('/pastries/:indexOfPastriesArray', (req, res) => {
+  let idx = parseInt(req.params.indexOfPastriesArray);
+  if (idx >= pastries.length) {
+      res.render('404.ejs');
+  } else {
+      res.render('pastries/show.ejs', {pastry: pastries[idx], id: idx});
+  }
+})
+
+// ========== PASTRY POST ===========
+app.post('/pastries', (req, res) => {
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  pastries.push(req.body)
+  res.redirect('/pastries')
+})
+
+// =========== PASTRY DELETE ==========
+app.delete('/pastries/:id', (req, res) => {
+  pastries.splice(parseInt(req.params.id), 1);
+  res.redirect('/pastries');
+});
+
+// ========== PASTRY PUT ============
+app.put('/pastries/:id', (req, res) => {
+  console.log('------ UPDATE PASTRY ----------\n', req.body)
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  pastries[parseInt(req.params.id)] = req.body;
+  res.redirect('/pastries')
+})
+
 
 // -----Fruits ID -----
 app.put("/fruits/:id", (req, res) => {

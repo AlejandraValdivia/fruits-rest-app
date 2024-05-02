@@ -42,7 +42,7 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 /*==================== typed js ====================*/
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Engineer", "Backend Engineer", "Fullstack Engineer"],
+  strings: ["Foodie", "Love to cook!", "Coder who loves food!", "I love international flavors", "Follow my Blog!", "I love multiculturalism and their food!", "I love cooking and eating!", "I love chocolate ice cream, and you?", "Savoury or sweet?"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,

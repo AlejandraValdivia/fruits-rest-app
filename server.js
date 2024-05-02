@@ -106,7 +106,7 @@ app.get("/veggies/:indexOfVeggiesArray", function (req, res) {
   if (idx >= veggies.length) {
     res.render("404", {});
   } else {
-    res.render("veggies/show", { veggie: veggies[idx] });
+    res.render("veggies/show", { veggie: veggies[idx], id: idx });
   }
 });
 
@@ -142,7 +142,8 @@ app.get("/meats", function (req, res) {
     allFruits: fruits,
     allVeggies: veggies,
     allMeats: meats,
-    allRecipes: recipes
+    allRecipes: recipes,
+    allWorldCuisines: worldCuisines,
   });
 });
 
@@ -157,21 +158,21 @@ app.get("/meats/:indexOfMeatsArray", (req, res) => {
   if (idx >= meats.length) {
     res.render("404", {});
   } else {
-    res.render("meats/show", { meat: meats[idx] });
+    res.render("meats/show", { meat: meats[idx], id: idx });
   }
 });
 
 // -------- Get Edit page route --------------------------------
 app.get("/meats/:id/edit", (req, res) => {
-  const fruit = meats[req.params.id];
+  const meat = meats[req.params.id];
   let id = parseInt(req.params.id);
-  res.render("meats/edit", { fruit, id });
+  res.render("meats/edit", { meat, id });
 });
 
 app.get("/meats/:id/delete", (req, res) => {
-  const fruit = meats[req.params.id];
+  const meat = meats[req.params.id];
   let id = parseInt(req.params.id);
-  res.render("meats/delete", { fruit, id });
+  res.render("meats/delete", { meat, id });
 });
 
 // ---- Post new meat route --------------------------------

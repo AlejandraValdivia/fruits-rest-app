@@ -327,6 +327,11 @@ app.get('/pastries', (req, res) => {
   res.render('pastries/index.ejs', {allPastries: pastries})
 })
 
+// ========== PASTRY GET POST PAGE============
+app.get('/pastries/new', (req, res) => {
+  res.render('pastries/new.ejs')
+})
+
 // ========== PASTRY SHOW ============
 app.get('/pastries/:indexOfPastriesArray', (req, res) => {
   let idx = parseInt(req.params.indexOfPastriesArray);
@@ -335,6 +340,17 @@ app.get('/pastries/:indexOfPastriesArray', (req, res) => {
   } else {
       res.render('pastries/show.ejs', {pastry: pastries[idx], id: idx});
   }
+})
+
+// ========== PASTRY POST ===========
+app.post('/pastries', (req, res) => {
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  pastries.push(req.body)
+  res.redirect('/pastries')
 })
 
 

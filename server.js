@@ -11,6 +11,8 @@ const { meats } = require("./models/meats");
 const { recipes } = require("./models/recipes");
 const { about } = require("./models/about");
 const { worldCuisines } = require("./models/worldCuisines");
+// *********** DESSERT NODE VARIABLE ************
+const desserts = require("./models/desserts.js");
 
 // ------ Middleware---------
 app.use(methodOverride("_method"));
@@ -249,6 +251,28 @@ app.get("/world-cuisines/:indexOfWorldCuisinesArray", (req, res) => {
     res.render("world-cuisines/show", { worldCuisine: worldCuisines[idx] });
   }
 });
+
+// ********** DESSERT ROUTE ADDITIONS ***********
+
+// ========== DESSERT INDEX ===========
+app.get('/desserts', (req, res) => {
+  res.render('desserts/index.ejs', {allDesserts: desserts})
+})
+
+// ========== DESSERT POST ============
+app.get('/desserts/new', (req, res) => {
+  res.render('desserts/new.ejs')
+})
+
+// ========== DESSERT SHOW ============
+app.get('/desserts/:indexOfFruitsArray', (req, res) => {
+  let idx = parseInt(req.params.indexOfDessertsArray);
+  if (idx >= desserts.length) {
+      res.render('404.ejs');
+  } else {
+      res.render('desserts/show.ejs', {dessert: desserts[idx], id: idx});
+  }
+})
 
 // -----Fruits ID -----
 app.put("/fruits/:id", (req, res) => {

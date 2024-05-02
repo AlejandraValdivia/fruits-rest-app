@@ -13,6 +13,8 @@ const { about } = require("./models/about");
 const { worldCuisines } = require("./models/worldCuisines");
 // *********** DESSERT NODE VARIABLE ************
 const desserts = require("./models/desserts.js");
+// *********** PASTRIES NODE VARIABLE ***********
+const pastries = require('./models/pastries.js')
 
 // ------ Middleware---------
 app.use(methodOverride("_method"));
@@ -316,6 +318,14 @@ app.delete('/desserts/:id', (req, res) => {
   desserts.splice(parseInt(req.params.id), 1);
   res.redirect('/desserts');
 });
+// *********** END OF DESSERTS ROUTES *************
+
+// *********** PASTRIES ROUTES ADDITION ************
+
+// ========== PASTRIES INDEX ===========
+app.get('/pastries', (req, res) => {
+  res.render('pastries/index.ejs', {allPastries: pastries})
+})
 
 
 // -----Fruits ID -----

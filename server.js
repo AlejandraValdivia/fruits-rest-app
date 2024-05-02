@@ -274,6 +274,26 @@ app.get('/desserts/:indexOfFruitsArray', (req, res) => {
   }
 })
 
+// ========== DESSERT GET PUT PAGE =============
+app.get('/desserts/:id/edit', (req, res) => {
+  const dessert = desserts[req.params.id];
+  let id = parseInt(req.params.id)
+  res.render('desserts/edit', { dessert, id })
+})
+
+// ========== DESSERT PUT ============
+app.put('/desserts/:id', (req, res) => {
+  console.log('------ UPDATE DESSERT ----------\n', req.body)
+  if (req.body.readyToEat === 'on') {
+      req.body.readyToEat = true
+  } else {
+      req.body.readyToEat = false
+  }
+  desserts[parseInt(req.params.id)] = req.body;
+  res.redirect('/desserts')
+})
+
+
 // -----Fruits ID -----
 app.put("/fruits/:id", (req, res) => {
   console.log("----- update Fruit ----\n", req.body);

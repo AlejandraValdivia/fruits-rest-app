@@ -19,7 +19,7 @@ const recipes = [
     name: "Onion soup",
     worldCuisine: "french",
     readyToEat: true,
-    img: "/img/Greek-Chicken-KabobsIMG_9979.jpg.webp",
+    img: "/img/french-onion-soup.webp",
     preparationTime: '30 min',
     instructions: 'Marinate chicken with salt, pepper, and olive oil. Barbeque chicken for 20 minutes until tender'
   },

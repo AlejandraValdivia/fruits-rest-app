@@ -1,43 +1,0 @@
-
-var ftGUID_7815210="59656E88C1D3EF";
-var ftConfID_7815210="31503807";
-var ftParams_7815210="ftOBA=1&ft_domain=www.allrecipes.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.allrecipes.com%2Frecipe%2F56803%2Fvery-chocolate-ice-cream%2F&us_privacy=${US_PRIVACY}&cachebuster=220336.82136346577&ft_keyword=ALN3mbMAAABpCmEKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhQIiPz9lU-oAtTd2PMBsALXn6XjA0AG0gIqGAAiEwjut_KKrO2FAxXoI4gJHdEUAOQoATABOM21rYnBEkACSAFYgIEgEPCWif4BcFyp2CuUO1tNGYEaJy-IJg&ft_section=ALN3mbMAAABpCmEKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhQIiPz9lU-oAtTd2PMBsALXn6XjA0AG0gIqGAAiEwjut_KKrO2FAxXoI4gJHdEUAOQoATABOM21rYnBEkACSAFYgIEgEPCWif4BcFyp2CuUO1tNGYEaJy-IJg";
-var ftKeyword_7815210="";
-var ftCustom_7815210="";
-var ftSection_7815210="ALN3mbMAAABpCmEKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhQIiPz9lU-oAtTd2PMBsALXn6XjA0AG0gIqGAAiEwjut_KKrO2FAxXoI4gJHdEUAOQoATABOM21rYnBEkACSAFYgIEgEPCWif4BcFyp2CuUO1tNGYEaJy-IJg";
-var ftSegment_7815210="sk3,alnx";
-var ftSegmentList_7815210=[{s:'sk3'},{s:'alnx'}];
-var ftRuleMatch_7815210="0";
-var ftTimestamp_7815210="1714597161";
-var ftGeoC2_7815210="ca";
-var ftGeoState_7815210="bc";
-var ftGeoCity_7815210="surrey";
-var ftISP_7815210="telus communications inc.";
-var ftSpeed_7815210="broadband";
-var ftConnType_7815210="wifi";
-var ftDMA_7815210="124933";
-var ftLong_7815210="-122.69";
-var ftLat_7815210="49.13";
-var ftPostal_7815210="v4n 0b4";
-var ftTimeZone_7815210="-700";
-var ftMobileCarrier_7815210="";
-var ftImp7815210 = {};
-ftImp7815210.privacy = "x";
-ftImp7815210.guidAge = "0";
-ftImp7815210.impID = "86AA52BB-1D91-40CB-F0EC-38B6B7A2F969";
-ftImp7815210.duid = "FT:59656E88C1D3EF";
-
-ftImp7815210.ft_tpplid = "";
-ftImp7815210.ft_c = {};
-ftImp7815210.gdpr = "";
-ftImp7815210.gdpr_consent = "";
-ftImp7815210.gdpr_pd = "";
-ftImp7815210.oob_consent = "";
-ftImp7815210.gdprStoredConsent = "";
-ftImp7815210.us_privacy = "!!US_PRIVACY!";
-ftImp7815210.gpc = "";
-
-ftImp7815210.jsAppend = "1";
-var ftCreativeId_7815210 = "4503034";
-(function(){var tag=document.getElementById("ft_servedby_7815210")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m7815210";js.setAttribute("name","ftscript_m7815210");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("7815210");
-

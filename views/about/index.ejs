@@ -9,38 +9,42 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
     <title>About Me</title>
   </head>
   <body>
     <header class="header">
-      <a href="#" >
-        <img src="/img/alejandras-food-blog-beige.png" class="logo" alt="logo">
-      </a>
-      <i class='bx bx-menu' id="menu-icon"></i>
-      <nav class="navbar" id="nav-ul">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#meats">Meats</a>
-        <a href="#vegetables">Vegetables</a>
-        <a href="#recipes">Recipes</a>
-        <a href="#world-cuisines">Cuisines</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <nav class="sticky" id="navbar">
+        <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/veggies">Vegetables</a></li>
+            <li><a href="/fruits">Fruits</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/world-cuisines">Cuisines</a></li>
+            <li><a href="/about/0">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <div class="hero-image">
-      <div class="hero-text">
-        <h1 style="font-size:50px">About Me</h1>
+      <div class="overlay hero-text">
+        <h1>About Me</h1>
       </div>
     </div>
     <section class="timeline" id="recipes-div">
+      <% for( let index = 0; index < allAbout.length; index++ ) { %> <%
+        let about = allAbout[index] %>
       <div class="timeline-row">
         <div class="timeline-column">
           <h2 class="title">
             About<span class="animate" style="--i: 1"></span>
           </h2>
           <div class="timeline-box">
-            <% for( let index = 0; index < allAbout.length; index++ ) { %> <%
-            let about = allAbout[index] %>
             <div class="timeline-content">
               <div class="content">
                 <div class="year">
@@ -54,15 +58,14 @@
                 <p>
                   <%= about.bio %>
                 </p>
-                <a href="/about/<%= index %>">Checkout more...</a>
+                <button><a href="/about/0<%= index %>">Contact Me!</a></button>
               </div>
             </div>
             <div></div>
-          
             <% } %>
            
         
-          <div class="timeline-row" id="favorite-recipes">
+          <div class="timeline-row">
             <% for( let index = 0; index < allRecipes.length; index++ ) { %> <%
                 let recipe = allRecipes[index] %>
             <div class="timeline-column">
@@ -82,7 +85,7 @@
                     <p>
                       <%= recipe.instructions %>
                     </p>
-                    <a href="/recipe/<%= index %>">Checkout more...</a>
+                   <button><a href="/recipes/<%= index %>">Checkout more...</a></button>
                   </div>
                 </div>
                 <% } %>
@@ -91,12 +94,12 @@
           
         <!-- More recipes code goes here---->
         <div class="timeline-column">
+          <% for( let index = 0; index < allRecipes.length; index++ ) { %> <%
+            let recipe = allRecipes[index] %>
           <h2 class="title">
             More Recipes<span class="animate" style="--i: 1"></span>
           </h2>
           <div class="timeline-box">
-            <% for( let index = 0; index < allRecipes.length; index++ ) { %> <%
-            let recipe = allRecipes[index] %>
             <div class="timeline-content">
               <div class="content">
                 <div class="year">
@@ -109,7 +112,7 @@
                   voluptate natus consectetur suscipit aspernatur quos obcaecati
                   dolore veniam debitis omnis.
                 </p>
-                <a href="/recipes/<%= index %>">Checkout more...</a>
+                <button><a href="/recipes/<%= index %>">Checkout more...</a></button>
               </div>
             </div>
             <div></div>
@@ -122,13 +125,25 @@
     </section>
     <div class="card">
       <h3>Follow Me</h3>
-      <div class="social-media" style="background-color: #c5fff8;">
+      <div class="social-media">
         <a href="https://github.com/AlejandraValdivia"><i class='bx bxl-github'></i></a>
         <a href="https://www.linkedin.com/in/alejandra-valdivia-developer/"><i class='bx bxl-linkedin'></i></a> 
         <a href="https://codesandbox.io/dashboard/recent?workspace=2153d854-f3bb-4bc0-a5da-82d1787407a7"><i class='bx bx-square' ></i></a>
         <a href="https://linktr.ee/alexandra_web_dev"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.pinterest.ca/hyperlinkwebcreative/"><i class='bx bxl-pinterest'></i></a>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          by Alejandra Valdivia | All Rights Reserved.
+        </p>
+      </div>
+    </footer>
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 

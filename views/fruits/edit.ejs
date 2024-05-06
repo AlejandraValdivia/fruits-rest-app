@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fruits.css" />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
+    <title>Edit Fruit Page</title>
 </head>
+<header class="header">
+  <nav class="sticky" id="navbar">
+    <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+    <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-ul" id="nav-ul">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/veggies">Vegetables</a></li>
+        <li><a href="/fruits">Fruits</a></li>
+        <li><a href="/meats">Meats</a></li>
+        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="/world-cuisines">Cuisines</a></li>
+        <li><a href="/about/0">Contact</a></li>
+    </ul>
+</nav>
+  </header>
+  <div class="hero-image">
+    <div class="overlay hero-text">
+      <h1>Edit Fruit Page</h1>
+    </div>
+  </div>
 <body>
-    <h1>Edit fruit page</h1>
+    <div class="parent">
+    <div class="container">
     <form action="/fruits/<%= id %>/?_method=PUT" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" value="<%= fruit.name %>"/>
@@ -20,9 +48,11 @@
             <% } %>
         />
         <input type="submit" value="Submit Fruit">
-        <button><a href="/fruits/<%= id %>/delete">Delete Fruit</a></button>
-        
+        <button><a href="/fruits/<%= id %>/delete">Delete Fruit</a></button>  
       </form>
-    </form>
+    </div>
+    </div>
+    <!-- custom js -->
+    <script src="./js/app.js"></script>
 </body>
 </html>

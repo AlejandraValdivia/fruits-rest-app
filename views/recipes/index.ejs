@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/homepage.css" />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -13,24 +15,26 @@
   </head>
   <body>
     <header class="header">
-      <a href="#" >
-        <img src="/img/alejandras-food-blog-beige.png" class="logo" alt="logo">
-      </a>
-      <i class='bx bx-menu' id="menu-icon"></i>
-      <nav class="navbar" id="nav-ul">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#vegetables">Vegetables</a>
-        <a href="#fruits">Fruits</a>
-        <a href="#meats">Meats</a>
-        <a href="#recipes">Recipes</a>
-        <a href="#world-cuisines">Cuisines</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <nav class="sticky" id="navbar">
+        <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/veggies">Vegetables</a></li>
+            <li><a href="/fruits">Fruits</a></li>
+            <li><a href="/meats">Meats</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/world-cuisines">Cuisines</a></li>
+            <li><a href="/about/0">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <div class="hero-image">
-      <div class="hero-text">
-        <h1 style="font-size:50px; color:white">Recipes</h1>
+      <div class="overlay hero-text">
+        <h1>Recipes</h1>
       </div>
     </div>
 
@@ -49,6 +53,7 @@
                   <i class="bx bxs-calendar"></i>2021 - 2022
                 </div>
                 <h3><%= recipe.name %></h3>
+                <img src="<%= recipe.img %>" alt="">
                 <p>
                   I'm baby tumeric cronut subway tile, fam DIY laborum glossier
                   twee tonx four dollar toast master cleanse affogato pug vape.
@@ -57,7 +62,7 @@
                   Banh mi veniam intelligentsia, helvetica bicycle rights hoodie
                   do aute VHS aesthetic mlkshk eu taxidermy.
                 </p>
-                <a href="/recipes/<%= index %>">Checkout more...</a>
+                <button> <a href="/recipes/<%= index %>">Checkout more...</a></button>
               </div>
             </div>
             <div></div>
@@ -85,7 +90,7 @@
                   voluptate natus consectetur suscipit aspernatur quos obcaecati
                   dolore veniam debitis omnis.
                 </p>
-                <a href="/recipes/<%= index %>">Checkout more...</a>
+                <button><a href="/recipes/<%= index %>">Checkout more...</a></button>
             
                 <img src="<%= recipe.img %>" />
               </div>
@@ -98,5 +103,7 @@
         </div>
       </div>
     </section>
+    <!-- custom js -->
+    <script src="./js/app.js"></script>
   </body>
 </html>

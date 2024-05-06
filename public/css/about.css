@@ -20,9 +20,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/AdobeStock_768919564.jpeg") no-repeat scroll right center / cover
+  background: url("/img/AdobeStock_357900226.jpeg") no-repeat scroll right center / cover
       rgba(0, 0, 0, 0);
-  
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hero-text {
@@ -31,11 +44,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 img {
-  max-width: 500px !important;
+  max-width: 500px;
 }
 
 h1 {
@@ -50,43 +63,13 @@ h1 {
   left: 0;
   width: 100%;
   padding: 2rem 9%;
-  background: var(--bg-color);
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
 
-.logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 0.3rem;   
-  width: 100px;
-  height: auto;
-}
-
-#logo:hover {
-  color: rgb(0, 21, 106);
-}
-
-.navbar a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  margin-left: 4rem;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--main-color);
-}
-
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-}
 /* ----- Columns and Row for about ----- */
 .timeline {
   display: flex;
@@ -341,38 +324,8 @@ h1 {
 
 
 /* --- Social Media --- */
-
 .card {
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background: black;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: black;
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.5s ease;
-}
-
-.social-media a:hover {
-  background: var(--main-color);
-  color: rgb(53, 1, 101);
-  box-shadow: 0 0 1rem var(--main-color);
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
   margin-top: 20px;
 }

@@ -21,7 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 // add MIDDLEWARE for PUT and DELETE methods
 
 //--------Routes-----------------------------//
-//--- Index routes ----//
 app.get("/", function (req, res) {
   res.render("homepage/index", { allHomepage: homepage });
 });
@@ -201,12 +200,13 @@ app.get("/recipes", function (req, res) {
   });
 });
 
+// ------ Show route -----
 app.get("/recipes/:indexOfRecipesArray", (req, res) => {
   let idx = parseInt(req.params.indexOfRecipesArray);
   if (idx >= recipes.length) {
     res.render("404", {});
   } else {
-    res.render("recipes/show", { recipe: recipes[idx] });
+    res.render("recipes/show", { recipe: recipes[idx], id: idx });
   }
 });
 
@@ -231,7 +231,7 @@ app.get("/about/:indexOfAboutArray", (req, res) => {
 });
 
 app.get("/world-cuisines", function (req, res) {
-  res.render("recipes/index", {
+  res.render("world-cuisines/index", {
     allFruits: fruits,
     allVeggies: veggies,
     allMeats: meats,
@@ -246,7 +246,7 @@ app.get("/world-cuisines/:indexOfWorldCuisinesArray", (req, res) => {
   if (idx >= worldCuisines.length) {
     res.render("404", {});
   } else {
-    res.render("world-cuisines/show", { worldCuisine: worldCuisines[idx] });
+    res.render("world-cuisines/show", { worldCuisine: worldCuisines[idx], id: idx });
   }
 });
 

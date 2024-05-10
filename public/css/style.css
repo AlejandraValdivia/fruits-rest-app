@@ -1,19 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #fff;
+  --second-bg-color: #36383c;
+  --text-color: #313131;
+  --main-color: #f9dfd2;
 }
 
 body {
-  background: #1f242d;
-  color: #ededed;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
 }
 
-.nav a {
-  color: #0ef;
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  text-align: justify;
+}
+
+p,
+a,
+li,
+ul,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #313131;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+
+/* ----- Header ----- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/*-----------Nav styles--------*/
+.nav-logo {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 1.3em;
+}
+
+.nav-ul a {
+  padding: 10px;
+  text-transform: none;
+  transition: text-shadow 0.3s;
+  color: var(--text-color);
+  font-weight: 100;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+ul#nav-ul {
+  margin-bottom: 20px;
+}
+
+.fa:hover,
+.nav-ul a:hover {
+  text-shadow: 0 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: var(--text-color);
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  padding-right: 50px;
+  display: block;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.page-heading {
+  position: relative;
+  padding: 1% 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  color: var(--text-color);
+  text-align: center;
+  margin: 32px 0;
+}
+
+.text-center {
+  text-align: center;
+  margin: 32px 0;
 }
 
 .timeline {
@@ -100,5 +230,194 @@ body {
 @keyframes show-right {
   100% {
     width: 0;
+  }
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Button and paragraph margin styles */
+.button-styles,
+p.text-margin-top {
+  margin: 20px 0;
+}
+
+/* --- Social Media --- */
+.social-media {
+  background-color: #c5fff8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--bg-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: black;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: rgb(53, 1, 101);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgb(42, 42, 42);
+  color: white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+  border: none;
+}
+
+button:hover {
+  background: rgb(103, 103, 103);
+  color: white;
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background: var(--main-color);
+  margin-top: 20px;
+  padding: 2rem 10%;
+  text-align: center;
+}
+
+.footer .footer-text {
+  text-align: center;
+}
+.footer p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
+}
+
+/*-------Media Queries start here-------*/
+/*NAV styles for smaller screens*/
+@media screen and (max-width: 900px) {
+  nav {
+    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+    margin: -30px 0 30px;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ---- Media Queries for Tablets ---- */
+@media screen and (min-width: 901px) {
+  .nav-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav {
+    background: var(--bg-color);
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.2em;
+  }
+
+  .nav-ul a {
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+    color: var(--text-color);
+  }
+
+  .fa:hover,
+  .nav-ul a:hover {
+    text-shadow: 0 1px 10px #fff, 1px 1px 10px #ccc;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-ul a {
+    font-size: 1.2rem;
   }
 }

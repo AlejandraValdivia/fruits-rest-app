@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/meats.css" />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
+    <title>Edit Meat</title>
+</head>
+<body>
+    <header class="header">
+      <nav class="sticky" id="navbar">
+        <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/veggies">Vegetables</a></li>
+            <li><a href="/fruits">Fruits</a></li>
+            <li><a href="/meats">Meats</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/world-cuisines">Cuisines</a></li>
+            <li><a href="/about/0">Contact</a></li>
+        </ul>
+    </nav>
+      </header>
+      <div class="hero-image">
+        <div class="overlay hero-text">
+          <h1>Veggies</h1>
+        </div>
+      </div>
+      <div class="text-center">
+        <h3>Edit Meats page</h3>
+      </div>
+
+      <div class="timeline-box">
+        <div class="timeline-content">
+          <div class="content">
+            <form action="/meats/<%= id %>/?_method=PUT" method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%= meat.name %>"/>
+                <label for="color">Color</label>
+                <input type="text" name="color" id="color" value="<%= meat.color %>"/>/>
+                <label for="readyToEat">Is Ready to Eat?</label>
+                <input type="checkbox" name="readyToEat" id="readyToEat" 
+                <% if ( meat.readyToEat === true ) { %>
+                    checked
+                    <% } %>
+                />
+                <input type="submit" value="Submit meat">
+                <button><a href="/meats/<%= id %>/delete">Delete meat</a></button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <!-- custom js -->
+    <script src="./js/app.js"></script>
+</body>
+</html>

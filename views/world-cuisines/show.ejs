@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/world-cuisines.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
+    <title>World Cuisines</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="sticky" id="navbar">
+        <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/veggies">Vegetables</a></li>
+            <li><a href="/fruits">Fruits</a></li>
+            <li><a href="/meats">Meats</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/world-cuisines">Cuisines</a></li>
+            <li><a href="/about/0">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="hero-image">
+      <div class="overlay hero-text">
+        <h1><%= worldCuisine.name %></h1>
+      </div>
+    </div>
+    <section class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-column">
+          <h2 class="title">
+            <h2><%= worldCuisine.worldCuisine %></h2><span class="animate" style="--i: 1"></span>
+          </h2>
+          <div class="timeline-box">
+            <div class="timeline-content">
+              <div class="content">
+                <div class="year">
+                  <i class="bx bxs-calendar"></i>2021 - 2022
+                </div>
+                <h3><%= worldCuisine.name %></h3>
+                <p><%= worldCuisine.flag %></p>
+                <img src="<%= worldCuisine.img %>" alt="worldCuisine">
+                
+                <a href="/world-cuisines/">Go back to the worldCuisines page</a>
+              </div>
+              <button><a href="/world-cuisines/<%= id %>/delete"">Delete worldCuisine</a></button>
+              <button><a href="/world-cuisines/<%= id %>/edit"">Edit worldCuisine</a></button>
+            </div>
+            <div></div>
+          
+
+            <span class="animate" style="--i: 2"></span>
+          </div>
+        </div>
+        <!-- custom js -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

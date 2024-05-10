@@ -1,39 +1,75 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruits</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fruits.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
+    <title>Apple Pie</title>
   </head>
   <body>
-    <h1><%= fruit.name %></h1>
-    <p>Color: <%= fruit.color %></p>
-    <% if (fruit.readyToEat) { %>
-    <p>Ready to Eat 👍🏽</p>
-    <% } else { %>
-    <p>Not Ready to Eat 👎🏽</p>
-    <% } %>
+    <header class="header">
+      <nav class="sticky" id="navbar">
+        <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/veggies">Vegetables</a></li>
+            <li><a href="/fruits">Fruits</a></li>
+            <li><a href="/meats">Meats</a></li>
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/world-cuisines">Cuisines</a></li>
+            <li><a href="/about/0">Contact</a></li>
+        </ul>
+    </nav>>
+    </header>
+    <div class="hero-image">
+      <div class="overlay hero-text">
+        <h1>Fruits</h1>
+      </div>
+    </div>
+    <section class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-column">
+          <h2 class="title">
+            <%= fruit.name %><span class="animate" style="--i: 1"></span>
+          </h2>
+          <div class="timeline-box">
+            
+            <div class="timeline-content">
+              <div class="content">
+                <div class="year">
+                  <i class="bx bxs-calendar"></i>2021 - 2022
+                </div>
+                <h3><%= fruit.name %></h3>
+                <img src="<%= fruit.img %>" alt="fruit">
+                <p><%= fruit.prepTime %></p>
+                <p><%= fruit.cookTime %></p>
+                <p><%= fruit.servings %></p>
+                <p><%= fruit.ingredients %></p>
+                <p><%= fruit.instructions %></p>
+                <a href="/fruits/">Go back to the Fruits page</a>
+              </div>
+              <button><a href="/fruits/<%= id %>/delete"">Delete Fruit</a></button>
+              <button><a href="/fruits/<%= id %>/edit"">Edit Fruit</a></button>
+            </div>
+            <div></div>
+          
 
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere beatae
-      quo, perspiciatis provident omnis quasi explicabo consequuntur debitis
-      modi dolores tenetur laboriosam enim ipsam! Optio quam velit aut illum vel
-      similique animi cupiditate. Facilis consequuntur, ex quam delectus
-      similique ut earum magnam eveniet amet ducimus, facere necessitatibus
-      assumenda odit, cupiditate nobis ab laudantium ad at porro quod animi
-      inventore fugit. Consectetur maiores eaque, iste nemo officiis reiciendis
-      eum facilis temporibus vel? Pariatur maxime qui natus architecto cumque
-      labore sapiente aspernatur quidem. Accusamus et rem dicta numquam expedita
-      velit reiciendis perferendis excepturi distinctio iusto! Reiciendis ea
-      nam, debitis minus quo ipsum?
-    </p>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo delectus
-      provident atque, quam tempore maxime recusandae commodi ex pariatur iusto.
-    </p>
-
-    <a href="/fruits">Go Back...</a>
-    <button><a href="/fruits/<%= id %>/edit">Edit</a></button>
-    <button><a href="/fruits/<%= id %>/delete">Delete Fruit</a></button>
+            <span class="animate" style="--i: 2"></span>
+          </div>
+        </div>
+        <!-- custom js -->
+    <script src="./js/app.js"></script>
   </body>
 </html>

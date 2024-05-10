@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #313131;
+}
+.hero-image {
+  margin-top: 6rem;
+  position: relative;
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/AdobeStock_357900226.jpeg") no-repeat scroll right center / cover
+      rgba(0, 0, 0, 0);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+img {
+  max-width: 500px;
+}
+
+h1 {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+/* ----- Header, logo and navigation ----- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* ----- Columns and Row for about ----- */
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 9%;
+}
+.timeline .timeline-row {
+  display: flex;
+  column-gap: 64px;
+  flex-wrap: wrap;
+}
+
+#favorite-recipes {
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  background-color: antiquewhite;
+}
+.timeline-row .timeline-column {
+  flex: 1 1 320px;
+}
+
+.timeline-column .title {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  margin: 32px 0 16px 30px;
+}
+
+.timeline-column .timeline-box {
+  position: relative;
+  border-left: 2px solid #0ef;
+}
+
+.timeline-box .timeline-content {
+  position: relative;
+  padding-left: 27px;
+}
+
+.timeline-box .timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10.5px;
+  width: 20px;
+  height: 20px;
+  background: #0ef;
+  border-radius: 50%;
+}
+
+.timeline-content .content {
+  padding: 24px;
+  border: 2px solid #0ef;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  width: 30vw;
+}
+
+.timeline-content .content .year {
+  font-size: 16px;
+  color: ■ #0ef;
+}
+
+.timeline-content .content .year i {
+  margin-right: 8px;
+}
+
+.timeline-content .content h3 {
+  font-size: 19px;
+  margin: 8px 0;
+}
+
+.timeline-content .content p {
+  font-size: 16px;
+}
+
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  animation: show-right 1s ease forwards;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes show-right {
+  100% {
+    width: 0;
+  }
+}
+/*  ---- About -------------------------------- */
+#about {
+  margin-top: 7rem;
+}
+
+.headshot {
+  width: 100%;
+  border: 2px solid #0ef;
+}
+/* ---- Portfolio ---- */
+.portfolio {
+    background-color: bisque;
+  }
+  
+  .portfolio h2 {
+    margin-bottom: 4rem;
+    padding-top: 10rem;
+  }
+  
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 3.5rem;
+    padding: 2rem 30px 16rem;
+  }
+  
+  .portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  
+  .portfolio-box img:hover {
+    transform: scale(1.1);
+  }
+  
+  .portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translate(100%);
+    transition: 0.5s ease;
+  }
+  
+  .portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+  }
+  
+  .portfolio-layer h4 {
+    font-size: 3rem;
+  }
+  
+  .portfolio-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+  }
+  
+  .portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+  }
+  
+  .portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+  }
+  
+  #portfolio-img-1 {
+    height: 49vh;
+  }
+  
+  #portfolio-img-2 {
+    height: 18.5vw;
+  }
+  
+  #portfolio-img-3 {
+    height: 18.5vw;
+  }
+  
+  #portfolio-img-5 {
+    height: 21vw;
+  }
+
+
+/* ----- Contact Form ------- */
+.contact h2 {
+  margin-bottom: 3rem;
+  padding-top: 10rem;
+  text-align:center;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 10rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  background-color: aqua;
+  border-radius: 45px;
+  border: none;
+}
+
+
+/* --- Social Media --- */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}

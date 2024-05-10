@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/world-cuisines.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+     <!--social media icons link font awesome-->
+     <script src="https://kit.fontawesome.com/2dbc050342.js" crossorigin="anonymous"></script>
+    <title>World Cuisines</title>
+  </head>
+  <header class="header"> <nav class="sticky" id="navbar">
+    <a href="/"><img src="/img/alejandras-food-blog-beige.png" alt="logo" class="nav-logo"></a>
+    <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-ul" id="nav-ul">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/veggies">Vegetables</a></li>
+        <li><a href="/fruits">Fruits</a></li>
+        <li><a href="/meats">Meats</a></li>
+        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="/world-cuisines">Cuisines</a></li>
+        <li><a href="/about/0">Contact</a></li>
+    </ul>
+</nav>
+  </header>
+  <div class="hero-image">
+    <div class="overlay hero-text">
+      <h1>World Cuisines</h1>
+    </div>
+  </div>
+  <body>
+    <section class="timeline">
+      <% for( let index = 0; index < worldCuisines.length; index++ ) { %> <%
+        let worldCuisine = worldCuisines[index] %>
+      <div class="timeline-row">
+        <div class="timeline-column">
+          <h2 class="title">
+            World Cuisines<span class="animate" style="--i: 1"></span>
+          </h2>
+          <div class="timeline-box">
+
+            <div class="timeline-content">
+              <div class="content">
+                <div class="year">
+                  <i class="bx bxs-calendar"></i>2021 - 2022
+                </div>
+                <h3><%= worldCuisine.name %></h3>
+                <p><%= worldCuisine.flag %></p>
+                <p>
+                  I'm baby tumeric cronut subway tile, fam DIY laborum glossier
+                  twee tonx four dollar toast master cleanse affogato pug vape.
+                  Sus retro veniam actually copper mug irure aesthetic
+                  wayfarers. Normcore ut 3 wolf moon sartorial fit fanny pack.
+                  Banh mi veniam intelligentsia, helvetica bicycle rights hoodie
+                  do aute VHS aesthetic mlkshk eu taxidermy.
+                </p>
+                <button><a href="/world-cuisines/<%= index %>">Checkout more...</a></button>
+              </div>
+            </div>
+            <div></div>
+            <% } %>
+
+            <span class="animate" style="--i: 2"></span>
+          </div>
+        </div>
+
+        <div class="timeline-column">
+          <h2 class="title">
+            World Cuisines<span class="animate" style="--i: 1"></span>
+          </h2>
+          <div class="timeline-box">
+            <% for( let index = 0; index < worldCuisines.length; index++ ) { %> <%
+            let worldCuisine = worldCuisines[index] %>
+            <div class="timeline-content">
+              <div class="content">
+                <div class="year">
+                  <i class="bx bxs-calendar"></i>2021 - 2022
+                </div>
+                <h3><%= worldCuisine.name %></h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                  voluptate natus consectetur suscipit aspernatur quos obcaecati
+                  dolore veniam debitis omnis.
+                </p>
+                <button><a href="/world-cuisines/<%= index %>">Checkout more...</a></button>
+                <img src="<%= worldCuisine.img %>" />
+              </div>
+            </div>
+            <div></div>
+            <% } %>
+
+            <span class="animate" style="--i: 2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- custom js -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

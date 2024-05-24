@@ -45,8 +45,7 @@ h3 {
 p,
 a,
 li,
-ul,
-button {
+ul {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1.1rem;
@@ -56,8 +55,24 @@ button {
   padding: 0;
   margin: 0;
   text-align: justify;
+  line-height: normal;
+  /* width: fit-content;
+  border-radius: 50rem; */
 }
 
+button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgb(42, 42, 42);
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 50rem;
+  transition: 0.5s ease;
+  border: none;
+}
 /* ----- Header ----- */
 .header {
   position: fixed;
@@ -251,6 +266,8 @@ ul#nav-ul {
 .button-styles,
 p.text-margin-top {
   margin: 20px 0;
+  /* width: fit-content;
+  border-radius: 50rem; */
 }
 
 /* --- Social Media --- */
@@ -283,18 +300,7 @@ p.text-margin-top {
   box-shadow: 0 0 1rem var(--main-color);
 }
 
-button {
-  display: inline-block;
-  padding: 0.7rem 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  background: rgb(42, 42, 42);
-  color: white;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: 0.5s ease;
-  border: none;
-}
+
 
 button:hover {
   background: rgb(103, 103, 103);

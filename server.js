@@ -301,6 +301,34 @@ app.delete("/meats/:id", (req, res) => {
   res.redirect("/meats");
 });
 
+// const axios = require('axios');
+
+// const options = {
+//   method: 'POST',
+//   url: 'https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/nutrients',
+//   headers: {
+//     'content-type': 'application/json',
+//     'X-RapidAPI-Key': '88ef413984msh6a081c8bf594332p12eb3ajsnb40539b674c2',
+//     'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
+//   },
+//   data: {
+//     ingredients: [
+//       {
+//         quantity: 0,
+//         measureURI: '',
+//         qualifiers: [],
+//         foodId: ''
+//       }
+//     ]
+//   }
+// };
+
+// try {
+// 	const response = await axios.request(options);
+// 	console.log(response.data);
+// } catch (error) {
+// 	console.error(error);
+// }
 //--------listen for server-------
 app.listen(PORT, (req, res) => {
   console.log("listening on port " + PORT);

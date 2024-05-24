@@ -1,345 +1,162 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
-  background: #ffffff;
-  color: #191919;
+  background: #DAF7F6;
+  color: #3B3B3B;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.hero-image {
-  margin-top: 6rem;
-  position: relative;
-  width: 100%;
-  min-height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("/img/caroline-attwood-bpPTlXWTOvg-unsplash.jpg") no-repeat scroll right center / cover
-      rgba(0, 0, 0, 0);
-}
-
-.overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.65);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.hero-text {
+header {
+  background: white;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
 }
 
-img{
-  max-width: 500px;
-}
-
-/* ----- Header, logo and navigation ----- */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 9%;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.logo {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  margin-top: 0.3rem;   
-  width: 100px;
-  height: auto;
-}
-
-.logo:hover {
-  color: #191919;
-}
-
-.navbar a {
-  font-size: 1.7rem;
-  color: #191919;
-  margin-left: 4rem;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--main-color);
-}
-
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-}
-/* ----- Columns and Row for Meats ----- */
-.timeline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 9%;
-}
-.timeline .timeline-row {
-  display: flex;
-  column-gap: 64px;
-  flex-wrap: wrap;
-}
-
-.timeline-row .timeline-column {
-  flex: 1 1 320px;
-}
-
-.timeline-column .title {
-  position: relative;
+h1 {
+  color: #F16059;
   display: inline-block;
-  font-size: 28px;
-  margin: 32px 0 16px 30px;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  padding: 40px 0;
+  text-transform: uppercase;
 }
 
-.timeline-column .timeline-box {
-  position: relative;
-  border-left: 2px solid rgba(170, 73, 255, 0.961);
-}
-
-.timeline-box .timeline-content {
-  position: relative;
-  padding-left: 27px;
-}
-
-.timeline-box .timeline-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -10.5px;
-  width: 20px;
-  height: 20px;
-  background: rgba(170, 73, 255, 0.961);
-  border-radius: 50%;
-}
-
-.timeline-content .content {
-  padding: 24px;
-  border: 2px solid rgba(170, 73, 255, 0.961);
-  border-radius: 8px;
-  margin-bottom: 32px;
-}
-
-.timeline-content .content .year {
-  font-size: 16px;
-  color: ■ rgba(170, 73, 255, 0.961);
-}
-
-.timeline-content .content .year i {
-  margin-right: 8px;
-}
-
-.timeline-content .content h3 {
-  font-size: 19px;
-  margin: 8px 0;
-}
-
-.timeline-content .content p {
-  font-size: 16px;
-}
-
-.animate {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: #1f242d;
-  animation: show-right 1s ease forwards;
-  animation-delay: calc(0.5s * var(--i));
-}
-
-@keyframes show-right {
-  100% {
-    width: 0;
-  }
-}
-
-/* homepage blog styles */
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Homepage Recipe images */
-.img-1 {
-  background: url("/img/layer-carrot-cake-3.jpg") no-repeat scroll right center / cover
-  rgba(0, 0, 0, 0);  width: 100%;
-  padding: 20px;
-  height: 500px;
-}
-
-.sidebar-img-1 {
-  background: url("/img/layer-carrot-cake-3.jpg") no-repeat scroll right center / cover
-  rgba(0, 0, 0, 0);  width: 100%;
-  padding: 20px;
-  height: 500px;
-}
-
-.sidebar-img-2 {
-  background: url("/img/kiwi-jam.webp") no-repeat scroll right center / cover
-  rgba(0, 0, 0, 0);  width: 100%;
-  padding: 20px;
-  height: 500px;
-}
-
-.sidebar-img-3 {
-  background: url("/img/Blueberry-Smoothie-Recipe-1-1200.jpg") no-repeat scroll right center / cover
-  rgba(0, 0, 0, 0);  width: 100%;
-  padding: 20px;
-  height: 500px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
+.recipe-collection, .recipe-collection h2 {
   text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* --- Footer --- */
-.footer {
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 10%;
-  background: var(--second-bg-color);
-}
-
-.footer p {
-  font-size: 1.6rem;
-}
-
-.footer-iconTop a {
-  display: inline-flex;
   justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  background: var(--main-color);
-  border-radius: 0.8rem;
-  transition: 0.5s ease;
 }
 
-.footer-iconTop a:hover {
-  box-shadow: 0 0 1rem var(--main-color);
+header img {
+ margin-right: 16px;
 }
 
-.footer-iconTop a i {
-  font-size: 2.4rem;
-  color: var(--second-bg-color);
+main {
+  margin: 0 auto;
+  width: 70%;
 }
 
-/* --- BREAKPOINTS --- */
-@media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
+.card {
+  margin: 25px 0;
+  overflow: auto;
+  display: flex;
 }
 
-@media (max-width: 991px) {
-  .header {
-    padding: 2rem 3%;
-  }
-
-  .navbar.show {
-    display: flex;
-    flex-direction: column;
-  }
-
-  section {
-    padding: 10rem 3% 2rem;
-  }
-
+.image {
+  float: left;
+  height: 550px;
+  width: 500px;
 }
 
+.recipe {
+  background: #ffffff;
+  box-sizing: border-box;
+  float: left;
+  height: 550px;
+  padding: 20px;
+  width: 100%;
+}
 
-@media (max-width: 768px) {
-  #menu-icon {
-    /*-- Hamburger Button --- */
-    display: block;
-    margin-right: 80px;
-  }
+#cookies .image {
+  background-image: url("../img/gluten-free-sugar-cookies.jpg");
+  background-size: cover;
+}
 
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    display: none;
-  }
+#pesto .image {
+  background-image: url("../img/nut-free-pesto.jpg");
+  background-size: cover;
+}
 
-  .navbar .active {
-    display: block;
-  }
+#salad .image {
+  background-image: url("../img/watermelon-salad.jpg");
+  background-size: cover;
+}
 
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 1rem 0;
-  }
+.recipe h2 {
+  color:#F16059; 
+  font-family: 'Montserrat','sans-serif';
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.time {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3B3B3B;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.time div {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 6px;
+  width: 33.33333%;
+  text-transform: uppercase;
+  line-height: 1.4rem;
+}
+
+.time .cook {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #3B3B3B;
+}
+
+.time img {
+  height: auto;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 15px;
+}
+
+.time-details {
+  display: inline-block;
+}
+
+.time .strong {
+  font-family: 'Montserrat' , 'sans-serif';
+}
+
+.columns {
+  overflow: auto;
+}
+
+.directions {
+  float: left;
+  width: 55%;
+  overflow: hidden;
+}
+
+.ingredients {
+  float: left;
+  margin-right: 15px;
+  width: 40%;
+}
+
+.recipe h3 {
+  border-color: #3b3b3b;
+  border-style: solid;
+  border-width: 1px 0;
+  color: #F16059;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px;
+  text-transform: uppercase;
+}
+
+.ingredients ul {
+  line-height: 24px;
+  ;list-style: square;
+  padding-left: 15px;
+}
+
+.directions ol {
+  line-height: 22px;
+  padding-left: 15px;
 }

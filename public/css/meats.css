@@ -183,3 +183,7 @@ img{
     width: 0;
   }
 }
+
+li.recipe-ingredients{
+  list-style: disc;
+}
